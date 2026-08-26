@@ -76,12 +76,12 @@ services:
       - "${PROD_LIVE_WS_PORT:-20132}:${LIVE_WS_PORT:-20132}"
     volumes:
       - omniroute-prod-data:/app/data
-    healthcheck:
-      test: ["CMD", "node", "healthcheck.mjs"]
-      interval: 30s
-      timeout: 5s
-      retries: 3
-      start_period: 15s
+   # healthcheck:
+   #   test: ["CMD", "node", "healthcheck.mjs"]
+   #   interval: 30s
+   #   timeout: 5s
+   #   retries: 3
+   #   start_period: 15s
 
   chatgpt-web-codex-browser:
     build:
